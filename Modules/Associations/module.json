@@ -1,0 +1,11 @@
+{
+    "name": "Associations",
+    "alias": "associations",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Associations\\Providers\\AssociationsServiceProvider"
+    ],
+    "files": []
+}

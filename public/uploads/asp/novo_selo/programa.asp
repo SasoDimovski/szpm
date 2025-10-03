@@ -1,0 +1,282 @@
+
+<!--#include virtual="/Admin/_properties.asp"-->
+<%call connectDB%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="mk" xml:lang="mk"><!-- InstanceBegin template="/Templates/kumanovo.dwt.asp" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Здружение на пензионери Ново Село</title>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<script type="text/javascript" src="../js/main.js"></script>
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SFG2N54M33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SFG2N54M33');
+</script>
+<link href="../kumanovo/zdruzenie.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="heder">&nbsp;</td>
+    <td class="heder" width="980"><div class="logo" onClick="window.location='../kumanovo/'">Здружение на пензионери <strong>Куманово</strong></div></td>
+    <td class="heder">&nbsp;</td>
+  </tr>
+  </table>
+  <div class="meni">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="750"><table width="980" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="90" align="center"><a href="../kumanovo/index.asp">За нас</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="130" align="center"><a href="../kumanovo/organizacija.asp">Организација</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="110" align="center"><a href="../kumanovo/programa.asp">Програма</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="150" align="center"><a href="../kumanovo/dokumenti.asp">Документи</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="90" align="center"><a href="../kumanovo/kontakt.asp">Контакт</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td width="90" align="center"><a href="../mak/">СЗПМ</a></td>
+        <td width="5"><img src="../images/meni_razdelnik.png" width="5" height="39" /></td>
+        <td align="center">&nbsp;</td>
+      </tr>
+    </table></td>
+    <td>&nbsp;</td>
+  </tr>
+  </table>
+  </div>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="980"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="naslov">&nbsp;</td>
+        <td align="center" class="naslov"><!-- InstanceBeginEditable name="naslov" --><strong>ПРОГРАМА</strong><!-- InstanceEndEditable --></td>
+        <td class="naslov">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="200" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+        <tr>
+            <td>
+            <%
+sub ispisi_mesec(datum)
+Select Case month(datum)
+	Case 1
+	response.write "јануари"
+	Case 2
+	response.write "февруари"
+	Case 3
+	response.write "март"
+	Case 4
+	response.write "април"
+	Case 5
+	response.write "мај"
+	Case 6
+	response.write "јуни"
+	Case 7
+	response.write "јули"
+	Case 8
+	response.write "август"
+	Case 9
+	response.write "септември"
+	Case 10
+	response.write "октомври"
+	Case 11
+	response.write "ноември"
+	Case 12
+	response.write "декември"
+end select
+end sub
+
+            
+call openRekset(rs_vesti)
+
+sql="SELECT top 1 * FROM novosti where kategorija=2 ORDER BY datum desc"
+
+rs_vesti.Open sql ,konStr,1,1
+
+%>
+<div class="vesnik_najnov_kontejner">
+<div class="vesnik_najnov_tekst">најнов весник</div>
+  <div class="vesnik_najnov"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank"><img src="../vesnik/<%=rs_vesti("slika")%>" width="170" height="231"alt="<%=rs_vesti("naslov")%>" /></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank">број <%=rs_vesti("naslov")&", "%><%ispisi_mesec(rs_vesti("datum"))%></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../mak/vesnik_penzioner_plus.asp"><strong>архива на сите броеви</strong></a></div>
+</div>
+<%call closeRekset(rs_vesti)%>
+</td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td>
+            <%
+call openRekset(rs_vesti)
+
+sql="SELECT top 1 * FROM novosti where kategorija=3 ORDER BY datum desc"
+
+rs_vesti.Open sql ,konStr,1,1
+
+%>
+<div class="vesnik_najnov_kontejner">
+  <div class="vesnik_najnov"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank"><img src="../vesnik/<%=rs_vesti("slika")%>" width="170" height="231"alt="<%=rs_vesti("naslov")%>" /></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank"><%=rs_vesti("naslov")%></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../mak/vesnik_penzioner_plus.asp"><strong>архива на сите броеви</strong></a></div>
+</div>
+<%call closeRekset(rs_vesti)%>
+</td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td>
+            <%
+call openRekset(rs_vesti)
+
+sql="SELECT top 1 * FROM novosti where kategorija=4 ORDER BY datum desc"
+
+rs_vesti.Open sql ,konStr,1,1
+
+%>
+<div class="vesnik_najnov_kontejner">
+  <div class="vesnik_najnov"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank"><img src="../vesnik/<%=rs_vesti("slika")%>" width="170" height="231" alt="<%=rs_vesti("naslov")%>" /></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../vesnik/<%=rs_vesti("pdf")%>" target="_blank"><%=rs_vesti("naslov")%></a></div>
+  <div class="vesnik_najnov_tekst"><a href="../mak/vesnik_penzioner_plus.asp"><strong>архива на сите броеви</strong></a></div>
+</div>
+<%call closeRekset(rs_vesti)%>
+</td>
+          </tr>
+        </table>
+          <div class="modul crven">
+            <div class="modul_naslov">Страници на здруженија</div>
+            <div class="modul_sodrzina zdruzenija">
+              <form name="form" id="form">
+                <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
+                  <option>Избери здружение</option>
+                  <%
+			  call openRekset(rs_zdruzenija)
+rs_zdruzenija.Open "SELECT * FROM zdruzenija where aktivno=1 ORDER BY zdruzenie asc" ,konStr,1,1
+
+while not rs_zdruzenija.EOF
+%>
+                  <option value="../<%=rs_zdruzenija("link")%>/"><%=rs_zdruzenija("zdruzenie")%></option>
+                  <%
+rs_zdruzenija.MoveNext
+wend
+
+call closeRekset(rs_zdruzenija)
+
+%>
+                </select>
+              </form>
+            </div>
+            <div class="modul_dno"></div>
+          </div></td>
+        <td valign="top" class="kelija_sodrzina"><!-- InstanceBeginEditable name="sodrzina" -->
+          <h3 align="center"><strong>П Р О Г Р А М А</strong><br />
+            <strong> За работа на Здружението на пензионери “Ново Село”-Ново Село во 2019 година</strong></h3>
+          <p>Во  претстојната 2019 година, Здружението на пензионери &ldquo;Ново Село&rdquo;-Ново Село,  влегува со богато искуство во работата на Здружението. Стекнатото искуство, ќе  биде предизвик и поголеми амбиции во остварувањето на целите и задачите на  Здружението. Во таа насока, агендата ќе биде мотивирана и од спроведувањето на  изборите на сите нивоа ви Здружението Ново Село, Липково и Старо Нагоричане.  Програмската година ќе биде значајна и по организирање на одредени активности  кои ќе бидат насочени кон одбележувањето на 500 години на постоењето на градот  Ново Село.</p>
+          <p><strong>1. СОБРАНИЕ НА  ЗДРУЖЕНИЕ</strong></p>
+          <p>              Овој највисок орган на Здружението, во 2019 година ќе ги реализира следниве  задачи:<br />
+              1.До крајот на март ќе се одржи констититутивно - изборна седница на која ќе  биде избрано ново раководство, Извршен одбор, Надзорен одбор, Одбор за статут и  правни прашања како и делегати за СЗПМ . <br />
+              -усвојување годишни и полугодишни сметки на приходите и расходите на  Здружението и на Солидарниот фонд на Здружението за 2018 година;<br />
+              2.Втората седница на Собранието ќе се одржи до крајот на декември 2019 година,  на која се планира да бидат усвоени финансиски планови на приходите и расходите  на Здружението и на Солидарниот фонд на Здружението за 2019 година <br />
+            Покрај овие статутарни обврски, на седницата на Собранието ќе бидат разгледани  и други актуелни прашања што ќе произлезат од потребите на пензионерите.</p>
+          <p><strong>2.&nbsp;ИЗВРШЕН ОДБОР&nbsp;</strong></p>
+          <p>            Извршниот одбор, според Статутот е првиот орган по своето значење избран од  Собранието. Во неговите многубројни обврски спаѓа подготовките на материјалите  што се во надлежност на Собранието и обратно, се грижи за остварување на  одлуките, заклучоците и ставовите што ги донесува Собранието.<br />
+            Вториот  позначаен пункт ќе биде натамошно проширување на мрежата на пензионерски  клубови за престој и организирано користење на слободното време. Во таа насока  се настојува вакви клубови да се отворат и во оние урбани и рурални населби  каде што за тоа постојат услови, во прв ред на изнаоѓање на простор кој ќе биде  финансиски одржлив и рационално искористен. Во соработка со СЗПМ ќе иницира во  2019 година да се изврши ажурирање на застарените списоци на пензионерите, како  на ниво на пензионерски здруженија, така и на ниво на ограноци на пензионери. <br />
+            &nbsp;Во областа на здравствено-социјално  хуманитарната ориентација, посебно внимание ќе биде посветено на парична помош  на болни пензионери. За ова намена ќе бидат планирани 1.200.000 денари, што ќе  им се доделува на апликанти со комплетна медицинска документација и според  Правилникот за доделување еднократна неповратна парична помош. По пат на  интеракција, Комисијата за здравство ќе остварува соработка со здравствените  организации заради следење на остварувањето на објектите: бесплатно лекување на  лица над 65 години, потоа &ldquo;Мој термин и &ldquo;Аптека на тркала&rdquo;. Посебно внимание ќе  биде посветено на актуелни заболувања, зашто ќе биде програмирано одржување  предавање за едукација на пензионерите. Со Здружението за дијабет од Ново Село,  ќе бидат организирани предавања за срцевите заболувања и спроведување акции за  мерење притисок и ниво на шеќер во крвта.<br />
+            Културно-уметничкото  творештво беше и во 2019 година ќе биде застапена на програмата на нашето  Здружение. Креатор на активности- те ќе биде Комисијата за културно-уметнички  самодејности. Хорската, фолклорната, музичката и пеачката секција на изворна  народна музика ќе бидат фокусирани на подготовка на нови игри и песни. Тие ќе  бидат застапени на фестивали и тоа таму каде што ќе бидеме поканети било тоа да  е во Република Северна Македонија или надвор на Меѓународна сцена.<br />
+            Комисијата  ќе ги организира традиционалните концерти во Ново Село и поетско-музичките  вечери на поети. Драмската работилница ќе отпочне со подготовка на новата  сценска претстава Коштана а веќе реализираните сценски претстави с: &ldquo;Сомнително  лице&rdquo;, &ldquo;Ленче Кумановче&rdquo;, &ldquo;Шути и рогати&rdquo; и Кабаретската претстава ќе се  настојува да се репризираат. Новина на програмата ќе биде и одржувањето на  фестивал на пеачки групи, како од Македонија, така и од странство.<br />
+            Во  областа на информативната дејност останува практиката на издавање на два броја  (37 и 38) &ldquo;Пензионерски информатор&rdquo; на Македонски и Албански јазик. За  збогатување на интерактивното информирање, ќе се настои да се зголеми тиражот  на &ldquo;Пензионер плус&rdquo;, &ldquo;Пензионерски видици&rdquo; во Нова Македонија и да се изврши  претплата на весникот &ldquo;Коха&rdquo; на Албански јазик. Се планира да се збогатат  нашите постигања на електронските и печатените медиуми, помасовно користење на  порталите и пласирање соопштенија и плакати во клубовите како и одржување на  одредени прес конференции за настани од посебно значење за пензионерите.<br />
+            Активот  на пензионерки во текот на 2019 година ќе изврши избор на ново раководство и ќе  продолжи со своите активности во друштвото како и надвор во соработка со други  здруженија од РС Македонија и одредени невладини организации.<br />
+            Здружението  посебно внимание ќе обрне на физичката култура и спортот. Во таа насока, ќе  бидат организирани спортски натпревари и игри на ниво на Здружение како и  учество на регионален спортски натпревар кој ќе се одржи во Злетово. Најдобро  пласираните од овој натпревар Здружението ќе го претставуваат на Републичките  пензионерски натпревари. Во функција на успешен настап на спортските  натпревари, редовно ќе бидат одржувани турнири во сите спортски дисциплини,  потоа натпревари со пензионери од збратимени градови, двомеч и четири меч  доколку во овој период од другите здруженија се покаже интерес и постигне  догоовор. Ќе бидат одржани пролетен и есенски крос и рекреативни движења во природа.  Ќе се продолжи традицијата за организирање на екскурзии до одредени дестинации  атрактивни за членовите за што е изготвена и програма. Во остварувања на  програмските задачи, органите на Здружението, во своето делување, ќе остварува  соработка со СЗПМ, локалните самоуправи од општините Ново Село, Липково и Старо  Нагоричане, со Црвениот крст, Здружението на дијабет, како и со другите  Здруженија на пензионери од државата и странство. За секој настап ќе поднесува  програма и информација на Извршниот одбор.</p>
+        <!-- InstanceEndEditable --></td>
+        <td width="200" valign="top"><!-- InstanceBeginEditable name="desno" -->
+<div class="modul">
+            <div class="modul_naslov">Инфо</div>
+            <div class="modul_sodrzina">
+              <%
+call openRekset(rs_izvestai)
+rs_izvestai.Open "SELECT top 5 * FROM novosti where kategorija=1 ORDER BY datum desc, id desc" ,konStr,1,1
+
+while not rs_izvestai.EOF
+%>
+<span class="datum"><%=rs_izvestai("datum")%></span>
+<a class="naslov_glaven" href="../mak/zapis.asp?id=<%=rs_izvestai("id")%>"><%=rs_izvestai("naslov")%></a><br />
+<br /><%
+rs_izvestai.MoveNext
+wend
+
+call closeRekset(rs_izvestai)
+%>
+            </div>
+            <div class="modul_dno"><a href="../mak/lista.asp?kat=1">повеќе...</a></div>
+          </div><!-- InstanceEndEditable -->
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.mtsp.gov.mk/" target="_blank"><img src="../images/ministerstvo_trud.gif" width="194" height="51" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.piom.com.mk/" target="_blank"><img src="../images/fpiom.gif" width="194" height="89" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.fzo.org.mk/" target="_blank"><img src="../images/fzo.jpg" width="194" height="76" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://moh.gov.mk/" target="_blank"><img src="../images/zdravstvo.gif" width="194" height="89" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.ssm.org.mk/" target="_blank"><img src="../images/ssm.gif" width="194" height="89" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../images/pix.gif" width="1" height="5" /></td>
+          </tr>
+          <tr>
+            <td><a href="http://www.ckrm.org.mk/Default.aspx" target="_blank"><img src="../images/crven_krst.gif" width="194" height="128" border="0" /></a></td>
+          </tr>
+      </table></td>
+      </tr>
+    </table></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr class="meni">
+    <td>&nbsp;</td>
+    <td align="right" class="ankor">изработено од <a href="http://www.medium3.mk" class="ankor">Medium 3</a></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,64 @@
+{
+
+    "GLOBAL": "//////////////////////////////////////////",
+    "documents": "Податоци за датотеката",
+    "documents.id": "id",
+    "documents.name" : "Наслов",
+    "documents.name_des" : "Наслов на документот",
+    "documents.file" : "file",
+    "documents.file_des" : "Име на датотека",
+    "documents.active" : "Активен",
+    "documents.public" : "Јавен",
+    "documents.size": "Големина на датотека",
+    "documents.path" : "Патека на датотека",
+    "documents.type" : "Тип",
+    "documents.comment" : "Забелешка",
+    "documents.created_at" : "Датум на креирање",
+    "documents.updated_at" : "Датум на промени",
+
+    "documents.active_status" : "Статус на активност",
+    "documents.no_documents" : "Нема прикачени документи",
+    "documents.no_documents_no_record" : "За да внесете документи мора да го снимите записот",
+
+    "documents.title" : "Документи",
+    "documents.attach" : "Прикачи документи",
+    "documents.attach_success" : "Документот е успешно прикачен",
+    "documents.attach_error" : "Неуспешно прикачување на документ",
+    "documents.to_large" : "Документот не треба да е поголем од 4MB!",
+    "documents.ext_check_doc" : "Дозволени се само документи со наставка „.pdf“, „.doc“, „.docx“, „.xls“, „.xlsx“, „.txt“, „.ppt“ и „.pptx“!",
+    "documents.restriction" : "Недозволен тип и големина на датотека",
+
+
+    "VIEW": "//////////////////////////////////////////",
+    "documents.mail-registration.hi": "Здраво",
+    "documents.mail-registration.made": "Креиран е вашиот профил во апликацијата:",
+    "documents.mail-registration.username": "Корисничкото име со кое треба да се најавувате во апликацијата е:",
+    "documents.mail-registration.link": "За да се најавите во апликацијата потребно е да регистрирате лозинка на следниот линк:",
+    "documents.mail-registration.note": "Профилот нема да биде активен доколку не кликнете на наведениот линк и не ја регистрирате лозинката.",
+    "documents.mail-registration.expire": "Важноста на линкот е :name часа.",
+    "documents.mail-registration.link_app": "Линк до апликацијата:",
+    "documents.mail-registration.regards": "Ви благодариме и поздрав,",
+
+    "documents.edit.send_email_title": "Дали сакате да испратите email?",
+    "documents.edit.send_email_description": "На корисникот ќе му пристигне email на кој се наоѓа линк за внесување нова лозинка.<br> Во исто време постоечката лозинка ќе се ресетира со рандом генерирана лозинка. ",
+    "documents.edit.send_email_hint" : "Испрати емаил за регистрација или ресетирање на лозинка",
+    "documents.edit.send_email_success" : "Успешно e испратен email за регистрација или ресетирање на лозинка",
+    "documents.edit.send_email_error" : "Неуспешно испраќање email за регистрација или ресетирање на лозинка",
+    "documents.edit.image.title_res" : "Задолжителни рестрикции",
+    "documents.edit.image.size" : "Дозволена големина за слика при качување е <strong>:size</strong> MB",
+    "documents.edit.image.type" : "Дозволени се само следните формати за прирачување: <br> <strong>jpg, jpeg, gif</strong> и <strong>png</strong>",
+    "documents.edit.image.attach" : "Прикачи слика",
+    "documents.edit.image.detach" : "Откачи слика",
+    "documents.edit.image.delete_warning" : "<strong>Сликата ќе биде избришана од системот кога ќе кликнете на копчето „Зачувај“</strong>",
+    "documents.edit.image.save_warning" : "<strong>Сликата ќе биде снимена во системот кога ќе кликнете на копчето „Зачувај“</strong>",
+
+
+
+    "CONTROLLER": "//////////////////////////////////////////",
+    "documents.UsersController.email_subject": "Регистрација на лозинка",
+
+
+    "REQUEST": "//////////////////////////////////////////",
+    "documents.UsersUpdateRequest.min_string"  : "Полето <strong>:attribute</strong> мора да содржи минимум <strong>:min</strong> карактери.",
+    "documents.UsersUpdateRequest.same_string" : "Полето <strong>:attribute</strong> и полето <strong>:other</strong> мора да ја имаат истата вредност."
+}

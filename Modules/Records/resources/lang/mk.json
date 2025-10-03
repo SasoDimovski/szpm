@@ -1,0 +1,64 @@
+{
+
+    "GLOBAL": "//////////////////////////////////////////",
+    "records.id" :"ID",
+    "records.id_user" :"Корисник",
+    "records.id_association" :"Здружение",
+    "records.title" :"Наслов",
+    "records.slug" :"URL-slug",
+    "records.subtitle" :"Поднаслов",
+    "records.intro" :"Вовед",
+    "records.text" :"Содржина",
+    "records.picture" :"Слика",
+    "records.created_at" :"Датум на креирање",
+    "records.updated_at" :"Датум на промени",
+    "records.active" :"Активен",
+    "records.main" :"Главен",
+    "records.cover" :"Насловна",
+
+
+    "VIEW": "//////////////////////////////////////////",
+
+    "records.edit.image.title_res" : "Задолжителни рестрикции",
+    "records.edit.image.size" : "Дозволена големина за слика при качување е <strong>:size</strong> MB",
+    "records.edit.image.type" : "Дозволени се само следните формати за прирачување: <br> <strong>jpg, jpeg, gif</strong> и <strong>png</strong>",
+    "records.edit.image.attach" : "Прикачи слика",
+    "records.edit.image.detach" : "Откачи слика",
+    "records.edit.image.delete_warning" : "<strong>Сликата ќе биде избришана од системот кога ќе кликнете на копчето „Зачувај“</strong>",
+    "records.edit.image.save_warning" : "<strong>Сликата ќе биде снимена во системот кога ќе кликнете на копчето „Зачувај“</strong>",
+
+    "records.edit.document": "Податоци за датотеката",
+    "records.edit.document.id": "id",
+    "records.edit.document.name" : "Наслов",
+    "records.edit.document.name_des" : "Наслов на документот",
+    "records.edit.document.file" : "file",
+    "records.edit.document.file_des" : "Име на датотека",
+    "records.edit.document.active" : "Активен",
+    "records.edit.document.size": "Големина на датотека",
+    "records.edit.document.path" : "Патека на датотека",
+    "records.edit.document.type" : "Тип",
+    "records.edit.document.comment" : "Забелешка",
+    "records.edit.document.created_at" : "Датум на креирање",
+    "records.edit.document.updated_at" : "Датум на промени",
+
+    "records.edit.documents.active_status" : "Статус на активност",
+    "records.edit.documents.no_documents" : "Нема прикачени документи",
+    "records.edit.documents.no_documents_no_records" : "За да внесете документи мора да го снимите записот",
+
+    "records.edit.document.title" : "Документи",
+    "records.edit.document.attach" : "Прикачи документи",
+    "records.edit.document.attach_success" : "Документот е успешно прикачен",
+    "records.edit.document.attach_error" : "Неуспешно прикачување на документ",
+    "records.edit.document.to_large" : "Документот не треба да е поголем од 4MB!",
+    "records.edit.document.ext_check_doc" : "Дозволени се само документи со наставка „.pdf“, „.doc“, „.docx“, „.xls“, „.xlsx“, „.txt“, „.ppt“ и „.pptx“!",
+    "records.edit.document.restriction" : "Недозволен тип и големина на датотека",
+
+
+
+    "SERVICES": "//////////////////////////////////////////",
+    "records.UserServices.password_used" : "Лозинката е веќе употребена. Внесете нова",
+
+    "REQUEST": "//////////////////////////////////////////",
+    "records.UsersUpdateRequest.min_string"  : "Полето <strong>:attribute</strong> мора да содржи минимум <strong>:min</strong> карактери.",
+    "records.UsersUpdateRequest.same_string" : "Полето <strong>:attribute</strong> и полето <strong>:other</strong> мора да ја имаат истата вредност."
+}

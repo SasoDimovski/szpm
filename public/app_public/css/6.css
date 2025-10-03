@@ -1,0 +1,29 @@
+/* Hide original text */
+.adresa-szpm, .szpm {
+    display: none !important;
+}
+.ime-szpm {
+    font-size: 0; /* visually hides text but keeps element */
+}
+.logo-association {
+    display:block;
+    max-height:80px;
+    margin: 10px 0;
+    display: none !important;
+}
+
+.ime-szpm::before {
+    content: "Здружение на пензионери Валандово";  /* your replacement */
+    font-size: 26px;            /* restore font size */
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+#header .header-column {
+    flex-grow: 0;
+}
+.header-body {
+    background: linear-gradient(0deg, #ffc619, #d7a200);
+}
+.bg-color-secondary, .bg-secondary {
+    background-color: #d7a200 !important;
+}

@@ -1,0 +1,11 @@
+{
+    "Modules": true,
+    "Users": true,
+    "Auth": true,
+    "Groups": true,
+    "Main": true,
+    "Languages": true,
+    "User": true,
+    "\u0410ssociations": true,
+    "Associations": true
+}

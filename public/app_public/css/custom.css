@@ -1,0 +1,190 @@
+.logo-margin {
+      /* This margin applies to all screen sizes by default */
+  margin-right: 0;
+}
+#header .header-nav.header-nav-stripe nav > ul > li > a {
+    padding: 0 .65rem;
+}
+.blog-posts img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    border: solid 1px #EFEFEF;
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+    /* float: left; */
+    margin-bottom: 10px;
+}
+td {
+    vertical-align: top;
+}
+.tretina {
+    width: 33%; padding: 0 2em;
+}
+h3 {
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.logo_szpm {
+    float: left;
+    background: linear-gradient(0deg, #040086, #020043);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 34px;
+    font-weight: 1000;
+    text-align: center;
+}
+.ime-szpm {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--secondary);
+    text-shadow: 2px 2px 3px white;
+    text-transform: uppercase;
+    line-height: 26px;
+    display: block;
+    clear: both;
+
+}
+.header-container{
+    min-height: 105px;
+}
+.adresa-szpm {
+    font-size: 20px;
+    text-transform: lowercase;
+    display: block;
+}
+.header-body {
+	  background: 
+		url("../img/zname.png") no-repeat right top,
+		linear-gradient(0deg, #dadada, #a0a0a0);
+}
+.header-nav-bar {
+	border-top: 1px solid white;
+}
+table.dijagram {
+    float: none;
+}
+table.dijagram td, table.dijagram th {
+    padding:3px;
+    margin:3px;
+    border:solid 1px #999;
+    text-align:center;
+    background-color:#e8e8e8;
+    -moz-box-shadow:    inset 0 0 10px #9c9c9c;
+    -webkit-box-shadow: inset 0 0 10px #9c9c9c;
+    box-shadow:         inset 0 0 10px #9c9c9c;
+}
+#header .header-nav-main nav > ul > li > a {
+		font-weight: 800;
+}
+.blog-posts:not(.blog-posts-no-margins) article {
+	margin-bottom: 20px;
+}
+#header .header-column .header-extra-info li .header-extra-info-text label {
+	color:black;
+}
+.slika_vest {
+    float: left;
+}
+.slika_vest img {
+    height: auto;
+    padding: 5px;
+    border: solid 1px #EFEFEF;
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+    margin-bottom: 10px;
+        margin-right: 10px;
+    max-width: 250px !important;
+}
+a {
+	text-decoration: none;
+    color:var(--secondary);
+}
+p {
+	line-height: 20px;
+}
+.post-meta span i {
+    color:lightgray;
+}
+.post-meta span  {
+    color:var(--secondary);
+}
+.post-content h3 {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+    text-transform: unset;
+}
+#mainNav a.dropdown-item {
+    font-size: 1.1em !important;
+    text-transform: unset !important;
+}
+article.post h2 a {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Default (big screens) - keep original order */
+.leva-kolona {
+  order: 0;
+}
+.logo-association {
+    display:none;
+}
+.bg-color-secondary, .bg-secondary {
+	background-color: var(--secondary) !important;
+}
+.bg-red {
+	background-color: darkred;
+}
+.thumb-info-content-inner p, .thumb-info-content-inner h5, ul.nav-list li a  {
+    color: darkred;
+}
+ul.nav-list li a  {
+    padding: 5px 0 5px 22px;
+    font-weight: bold;
+}
+#jumpMenu {
+    width: 100%;
+    text-align: left;
+}
+#footer {
+    margin-top: 0;
+}
+/* Mobile screens - move .col-lg-2 to the right */
+@media (max-width: 992px) {
+  .leva-kolona {
+    order: 1; /* higher number pushes it after the others */
+  }
+    #header .header-nav-main nav > ul > li.dropdown-full-color.dropdown-light > a {
+        padding: 10px 0;
+    }
+    #header .header-nav-main nav.show {
+        background-color: lightgray;
+    }
+}
+/* Media query for mobile screens (e.g., up to 768px) */
+@media (max-width: 768px) {
+  .logo-margin {
+    /* Override the margin for smaller screens */
+    margin-right: 1.2em;
+  }
+    .adresa-szpm {
+        display: none;
+    }
+.ime-szpm {
+    font-size: 18px;
+}
+    #header .header-btn-collapse-nav {
+        background: grey;
+    }
+    body {
+        font-size: 15px;
+    }
+}

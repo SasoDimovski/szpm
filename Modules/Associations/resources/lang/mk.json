@@ -1,0 +1,44 @@
+{
+
+    "GLOBAL": "//////////////////////////////////////////",
+    "associations.id" :"ID",
+    "associations.name" :"Име на здружение",
+    "associations.phone" :"Телефон",
+    "associations.link" :"Линк",
+    "associations.active" :"Активен",
+    "associations.deleted" :"Избришан",
+    "associations.created_at" :"Датум на креирање",
+    "associations.updated_at" :" Датум на промени",
+    "associations.created_by" :"Креирано од",
+    "associations.updated_by" :"Променето од",
+
+
+    "VIEW": "//////////////////////////////////////////",
+
+    "associations.edit.send_email_title": "Дали сакате да испратите email?",
+    "associations.edit.send_email_description": "На корисникот ќе му пристигне email на кој се наоѓа линк за внесување нова лозинка.<br> Во исто време постоечката лозинка ќе се ресетира со рандом генерирана лозинка. ",
+    "associations.edit.send_email_hint" : "Испрати емаил за регистрација или ресетирање на лозинка",
+    "associations.edit.send_email_success" : "Успешно e испратен email за регистрација или ресетирање на лозинка",
+    "associations.edit.send_email_error" : "Неуспешно испраќање email за регистрација или ресетирање на лозинка",
+    "associations.edit.image.title_res" : "Задолжителни рестрикции",
+    "associations.edit.image.size" : "Дозволена големина за слика при качување е <strong>:size</strong> MB",
+    "associations.edit.image.type" : "Дозволени се само следните формати за прирачување: <br> <strong>jpg, jpeg, gif</strong> и <strong>png</strong>",
+    "associations.edit.image.attach" : "Прикачи слика",
+    "associations.edit.image.detach" : "Откачи слика",
+    "associations.edit.image.delete_warning" : "<strong>Сликата ќе биде избришана од системот кога ќе кликнете на копчето „Зачувај“</strong>",
+    "associations.edit.image.save_warning" : "<strong>Сликата ќе биде снимена во системот кога ќе кликнете на копчето „Зачувај“</strong>",
+
+
+
+    "CONTROLLER": "//////////////////////////////////////////",
+
+    "SERVICES": "//////////////////////////////////////////",
+    "associations.ProjectServices.error_no_existing_associations": "Проектот на е пронајден во базата на податоци",
+    "associations.ProjectServices.error_update_project": "Грешка при промена на податоци за проектот",
+    "associations.ProjectServices.success_with_warnings_update_activity": "Активностите кои се употребени во табелата „records“ не може да се избришат",
+
+
+    "REQUEST": "//////////////////////////////////////////",
+    "associations.UsersUpdateRequest.min_string"  : "Полето <strong>:attribute</strong> мора да содржи минимум <strong>:min</strong> карактери.",
+    "associations.UsersUpdateRequest.same_string" : "Полето <strong>:attribute</strong> и полето <strong>:other</strong> мора да ја имаат истата вредност."
+}
